@@ -41,5 +41,19 @@ class FizzBuzzTest extends TestCase {
         $List = $fizzBuzz->printNumbers($resultArray);
         $this->assertContains("Fizz", $List);         
     }
+
+    public function test_fizz_if_contains_three(): void {
+        $numb = 53;
+        $fizzBuzz = new FizzBuzz();
+        $result = $fizzBuzz->getFizzBuzz($numb);
+        $this->assertEquals("Fizz", $result);
+    }
+
+    public function test_fizz_if_contains_five(): void {
+        $numb = 665;
+        $fizzBuzz = new FizzBuzz();
+        $result = $fizzBuzz->getFizzBuzz($numb);
+        $this->assertEquals("Buzz", $result);
+    }
    
 }
